@@ -5,76 +5,81 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>BYSOCIALIG | Best SMM Panel</title>
     <style>
-        :root { --insta-grad: linear-gradient(45deg, #f09433, #e6683c, #dc2743, #cc2366, #bc1888); --whatsapp: #25D366; }
-        body { font-family: 'Segoe UI', sans-serif; margin: 0; background-color: #f4f4f4; color: #333; line-height: 1.6; overflow-x: hidden; }
-        
-        header { background: var(--insta-grad); color: white; padding: 50px 20px; text-align: center; box-shadow: 0 4px 15px rgba(0,0,0,0.2); }
-        h1 { margin: 0; font-size: 2.8em; letter-spacing: 4px; font-weight: 900; }
-        
+        :root { --insta-grad: linear-gradient(45deg, #f09433, #e6683c, #dc2743, #cc2366, #bc1888); --whatsapp: #25D366; --blue: #007bff; }
+        body { font-family: 'Segoe UI', sans-serif; margin: 0; background-color: #f4f4f4; color: #333; line-height: 1.6; }
+        header { background: var(--insta-grad); color: white; padding: 40px 20px; text-align: center; }
+        h1 { margin: 0; font-size: 2.5em; letter-spacing: 3px; }
         .container { max-width: 600px; margin: auto; padding: 20px; }
 
-        /* Offer Cards */
-        .section-title { font-size: 1.5em; margin: 30px 0 15px; color: #cc2366; font-weight: bold; border-bottom: 2px solid #cc2366; display: inline-block; }
-        .offer-card { background: white; border-radius: 15px; padding: 15px; margin-bottom: 15px; display: flex; justify-content: space-between; align-items: center; box-shadow: 0 4px 10px rgba(0,0,0,0.05); border-left: 5px solid #25D366; }
+        /* Navigation Style Tabs */
+        .nav-tabs { display: flex; justify-content: space-around; background: white; padding: 10px; margin-bottom: 20px; border-radius: 10px; box-shadow: 0 2px 5px rgba(0,0,0,0.1); }
+        .nav-tabs button { border: none; background: none; font-weight: bold; color: #666; cursor: pointer; padding: 10px; }
+        .nav-tabs button.active { color: #cc2366; border-bottom: 2px solid #cc2366; }
+
+        /* Section Cards */
+        .section { background: white; border-radius: 15px; padding: 20px; margin-bottom: 20px; box-shadow: 0 4px 10px rgba(0,0,0,0.05); }
+        .section-title { font-size: 1.3em; margin-bottom: 15px; color: #cc2366; font-weight: bold; display: block; text-align: center; }
         
-        .btn { background: var(--whatsapp); color: white; border: none; padding: 10px 20px; border-radius: 8px; font-weight: bold; cursor: pointer; font-size: 0.9em; }
+        .offer-card { display: flex; justify-content: space-between; align-items: center; padding: 10px 0; border-bottom: 1px solid #eee; }
+        .btn { background: var(--whatsapp); color: white; border: none; padding: 8px 15px; border-radius: 8px; font-weight: bold; cursor: pointer; text-decoration: none; font-size: 0.9em; }
 
-        /* Popup Modal Style */
-        .modal { display: none; position: fixed; z-index: 2000; left: 0; top: 0; width: 100%; height: 100%; background-color: rgba(0,0,0,0.7); }
-        .modal-content { background-color: white; margin: 20% auto; padding: 25px; border-radius: 20px; width: 85%; max-width: 400px; text-align: center; position: relative; }
-        .modal-content h2 { margin-top: 0; color: #cc2366; }
-        .modal-content input { width: 90%; padding: 12px; margin: 15px 0; border: 1px solid #ccc; border-radius: 8px; font-size: 16px; }
-        .close-btn { background: #555; color: white; padding: 10px 20px; border-radius: 8px; border: none; cursor: pointer; font-weight: bold; }
-        .submit-btn { background: var(--whatsapp); color: white; padding: 12px 25px; border-radius: 8px; border: none; cursor: pointer; font-weight: bold; margin-left: 10px; }
+        /* Add Fund Section */
+        .fund-box { text-align: center; }
+        .qr-placeholder { width: 200px; height: 200px; background: #eee; margin: 15px auto; border: 2px dashed #ccc; border-radius: 10px; display: flex; align-items: center; justify-content: center; }
+        .instruction { font-size: 0.9em; color: #666; background: #fff9c4; padding: 10px; border-radius: 8px; margin-top: 10px; }
 
-        /* QR & Footer */
-        .qr-card { background: white; padding: 25px; border-radius: 20px; margin-top: 40px; border: 2px dashed #bc1888; text-align: center; }
-        footer { background: #111; color: #888; padding: 40px 20px; text-align: center; margin-top: 50px; }
+        /* Popup Modal */
+        .modal { display: none; position: fixed; z-index: 2000; left: 0; top: 0; width: 100%; height: 100%; background: rgba(0,0,0,0.8); }
+        .modal-content { background: white; margin: 20% auto; padding: 25px; border-radius: 20px; width: 85%; max-width: 400px; text-align: center; }
+        input { width: 90%; padding: 12px; margin: 15px 0; border: 1px solid #ccc; border-radius: 8px; }
+
+        footer { background: #111; color: #888; padding: 30px; text-align: center; margin-top: 50px; }
     </style>
 </head>
 <body>
 
 <header>
     <h1>BYSOCIALIG</h1>
-    <p>Premium SMM Services & Free Offers</p>
+    <p>India's No.1 Fast SMM Panel</p>
 </header>
 
 <div class="container">
-    <div class="section-title">🎁 INSTAGRAM FREE OFFERS</div>
     
-    <div class="offer-card">
-        <div><h3>1K REEL VIEWS</h3><span style="color:green;font-weight:bold;">FREE 🎉</span></div>
-        <button class="btn" onclick="openOrder('1K Free Reel Views')">ODER 🎉</button>
+    <div class="section fund-box">
+        <span class="section-title">💰 ADD FUND (PAYMENT)</span>
+        <p>Wallet mein balance add karne ke liye niche scan karein:</p>
+        <div class="qr-placeholder">
+            <span>[ SCAN QR CODE ]</span>
+        </div>
+        <div class="instruction">
+            <b>Note:</b> Payment karne ke baad screenshot aur apni <b>User ID</b> WhatsApp par bhejein. Fund 5 minute mein add ho jayega.
+        </div>
+        <br>
+        <a href="https://wa.me/919122635530?text=Hi, Maine payment kar di hai, fund add kar do." class="btn" style="background:#007bff;">BHEJEIN SCREENSHOT 📲</a>
     </div>
 
-    <div class="offer-card">
-        <div><h3>2K REEL VIEWS</h3><span style="color:green;font-weight:bold;">FREE 🎉</span></div>
-        <button class="btn" onclick="openOrder('2K Free Reel Views')">ODER 🎉</button>
-    </div>
-
-    <div class="section-title">💎 PREMIUM SERVICES</div>
-    <div class="offer-card" style="border-left-color: #007bff;">
-        <div><h3>1K FOLLOWERS</h3><span style="font-weight:bold;">₹49 Only</span></div>
-        <button class="btn" style="background:#007bff;" onclick="openOrder('1K Paid Followers')">BUY NOW</button>
-    </div>
-
-    <div class="qr-card">
-        <h3 style="margin:0; color:#bc1888;">💳 FAST PAYMENT</h3>
-        <p>Scan & Send Screenshot</p>
-        <div style="width:180px;height:180px;background:#eee;margin:15px auto;display:flex;align-items:center;justify-content:center;border-radius:10px;">
-            <p style="color:#999;">[ QR PHOTO ]</p>
+    <div class="section">
+        <span class="section-title">🎁 SPECIAL OFFERS</span>
+        <div class="offer-card">
+            <div><b>1K REEL VIEWS</b><br><small style="color:green;">Price: FREE</small></div>
+            <button class="btn" onclick="openOrder('1K Free Views')">ORDER</button>
+        </div>
+        <div class="offer-card">
+            <div><b>1K FOLLOWERS</b><br><small style="color:red;">Price: ₹49</small></div>
+            <button class="btn" onclick="openOrder('1K Followers (Paid)')">BUY</button>
         </div>
     </div>
+
 </div>
 
 <div id="orderModal" class="modal">
     <div class="modal-content">
-        <h2 id="serviceName">Order Service</h2>
-        <p>Apne Instagram Post ya Profile ka link niche daalein:</p>
-        <input type="text" id="userLink" placeholder="https://www.instagram.com/p/..." required>
+        <h2 id="serviceName" style="color:#cc2366;">Order</h2>
+        <p>Apne Instagram Link daalein:</p>
+        <input type="text" id="userLink" placeholder="https://instagram.com/...">
         <br>
-        <button class="close-btn" onclick="closeOrder()">Cancel</button>
-        <button class="submit-btn" onclick="sendToWhatsApp()">Submit Order</button>
+        <button onclick="closeOrder()" style="padding:10px; border:none; border-radius:8px; cursor:pointer;">Cancel</button>
+        <button class="btn" onclick="sendToWhatsApp()" style="margin-left:10px;">Submit Order</button>
     </div>
 </div>
 
@@ -85,31 +90,19 @@
 
 <script>
     let selectedService = "";
-
     function openOrder(service) {
         selectedService = service;
         document.getElementById('serviceName').innerText = service;
         document.getElementById('orderModal').style.display = "block";
     }
-
     function closeOrder() {
         document.getElementById('orderModal').style.display = "none";
-        document.getElementById('userLink').value = "";
     }
-
     function sendToWhatsApp() {
         let link = document.getElementById('userLink').value;
-        if(link.trim() === "") {
-            alert("Bhai, Instagram link toh daalo!");
-            return;
-        }
-        let phone = "919122635530";
-        let message = "Hi BYSOCIALIG! Mera naya order hai:\n\n" + 
-                      "*Service:* " + selectedService + "\n" +
-                      "*Link:* " + link;
-        
-        let url = "https://wa.me/" + phone + "?text=" + encodeURIComponent(message);
-        window.open(url, '_blank');
+        if(!link) { alert("Link daalna zaroori hai!"); return; }
+        let msg = "Hi BYSOCIALIG!\nOrder: " + selectedService + "\nLink: " + link;
+        window.open("https://wa.me/919122635530?text=" + encodeURIComponent(msg));
         closeOrder();
     }
 </script>
