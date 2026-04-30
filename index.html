@@ -3,49 +3,116 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Digital Dost | SMM Services</title>
+    <title>BYSOCIALIG | Best SMM Panel</title>
     <style>
-        body { font-family: 'Arial', sans-serif; margin: 0; padding: 0; background-color: #f4f4f4; text-align: center; }
-        header { background: linear-gradient(45deg, #f09433, #e6683c, #dc2743, #cc2366, #bc1888); color: white; padding: 20px; }
-        .container { padding: 20px; }
-        .offer-card { background: white; margin: 15px auto; padding: 20px; border-radius: 15px; max-width: 400px; box-shadow: 0 4px 8px rgba(0,0,0,0.1); border-left: 5px solid #dc2743; }
-        .offer-card h3 { margin: 0; color: #333; }
-        .price { font-size: 24px; color: #cc2366; font-weight: bold; }
-        .btn-whatsapp { display: inline-block; background-color: #25d366; color: white; padding: 15px 30px; text-decoration: none; border-radius: 50px; font-weight: bold; margin-top: 20px; box-shadow: 0 4px 10px rgba(0,0,0,0.2); }
-        .footer { background: #222; color: white; padding: 15px; margin-top: 30px; }
+        :root { --insta-grad: linear-gradient(45deg, #f09433, #e6683c, #dc2743, #cc2366, #bc1888); --whatsapp: #25D366; }
+        body { font-family: 'Segoe UI', sans-serif; margin: 0; background-color: #f4f4f4; color: #333; line-height: 1.6; overflow-x: hidden; }
+        
+        header { background: var(--insta-grad); color: white; padding: 50px 20px; text-align: center; box-shadow: 0 4px 15px rgba(0,0,0,0.2); }
+        h1 { margin: 0; font-size: 2.8em; letter-spacing: 4px; font-weight: 900; }
+        
+        .container { max-width: 600px; margin: auto; padding: 20px; }
+
+        /* Offer Cards */
+        .section-title { font-size: 1.5em; margin: 30px 0 15px; color: #cc2366; font-weight: bold; border-bottom: 2px solid #cc2366; display: inline-block; }
+        .offer-card { background: white; border-radius: 15px; padding: 15px; margin-bottom: 15px; display: flex; justify-content: space-between; align-items: center; box-shadow: 0 4px 10px rgba(0,0,0,0.05); border-left: 5px solid #25D366; }
+        
+        .btn { background: var(--whatsapp); color: white; border: none; padding: 10px 20px; border-radius: 8px; font-weight: bold; cursor: pointer; font-size: 0.9em; }
+
+        /* Popup Modal Style */
+        .modal { display: none; position: fixed; z-index: 2000; left: 0; top: 0; width: 100%; height: 100%; background-color: rgba(0,0,0,0.7); }
+        .modal-content { background-color: white; margin: 20% auto; padding: 25px; border-radius: 20px; width: 85%; max-width: 400px; text-align: center; position: relative; }
+        .modal-content h2 { margin-top: 0; color: #cc2366; }
+        .modal-content input { width: 90%; padding: 12px; margin: 15px 0; border: 1px solid #ccc; border-radius: 8px; font-size: 16px; }
+        .close-btn { background: #555; color: white; padding: 10px 20px; border-radius: 8px; border: none; cursor: pointer; font-weight: bold; }
+        .submit-btn { background: var(--whatsapp); color: white; padding: 12px 25px; border-radius: 8px; border: none; cursor: pointer; font-weight: bold; margin-left: 10px; }
+
+        /* QR & Footer */
+        .qr-card { background: white; padding: 25px; border-radius: 20px; margin-top: 40px; border: 2px dashed #bc1888; text-align: center; }
+        footer { background: #111; color: #888; padding: 40px 20px; text-align: center; margin-top: 50px; }
     </style>
 </head>
 <body>
 
 <header>
-    <h1>DIGITAL DOST</h1>
-    <p>Premium Instagram & Social Media Services</p>
+    <h1>BYSOCIALIG</h1>
+    <p>Premium SMM Services & Free Offers</p>
 </header>
 
 <div class="container">
-    <h2>🔥 Special Offers 🔥</h2>
+    <div class="section-title">🎁 INSTAGRAM FREE OFFERS</div>
     
     <div class="offer-card">
-        <h3>1K REEL VIEWS</h3>
-        <p class="price">FREE (With Order)</p>
+        <div><h3>1K REEL VIEWS</h3><span style="color:green;font-weight:bold;">FREE 🎉</span></div>
+        <button class="btn" onclick="openOrder('1K Free Reel Views')">ODER 🎉</button>
     </div>
 
     <div class="offer-card">
-        <h3>5K REEL VIEWS</h3>
-        <p class="price">FREE (With Order)</p>
+        <div><h3>2K REEL VIEWS</h3><span style="color:green;font-weight:bold;">FREE 🎉</span></div>
+        <button class="btn" onclick="openOrder('2K Free Reel Views')">ODER 🎉</button>
     </div>
 
-    <p>Apna order book karne ke liye niche button par click karein:</p>
-    
-    <a href="https://wa.me/919122635530?text=Hi, mujhe Instagram views offer chahiye" class="btn-whatsapp">
-        Order on WhatsApp 📱
-    </a>
+    <div class="section-title">💎 PREMIUM SERVICES</div>
+    <div class="offer-card" style="border-left-color: #007bff;">
+        <div><h3>1K FOLLOWERS</h3><span style="font-weight:bold;">₹49 Only</span></div>
+        <button class="btn" style="background:#007bff;" onclick="openOrder('1K Paid Followers')">BUY NOW</button>
+    </div>
+
+    <div class="qr-card">
+        <h3 style="margin:0; color:#bc1888;">💳 FAST PAYMENT</h3>
+        <p>Scan & Send Screenshot</p>
+        <div style="width:180px;height:180px;background:#eee;margin:15px auto;display:flex;align-items:center;justify-content:center;border-radius:10px;">
+            <p style="color:#999;">[ QR PHOTO ]</p>
+        </div>
+    </div>
 </div>
 
-<div class="footer">
-    <p>Instagram: @shivam_singh_2586</p>
-    <p>&copy; 2026 Digital Dost - All Rights Reserved</p>
+<div id="orderModal" class="modal">
+    <div class="modal-content">
+        <h2 id="serviceName">Order Service</h2>
+        <p>Apne Instagram Post ya Profile ka link niche daalein:</p>
+        <input type="text" id="userLink" placeholder="https://www.instagram.com/p/..." required>
+        <br>
+        <button class="close-btn" onclick="closeOrder()">Cancel</button>
+        <button class="submit-btn" onclick="sendToWhatsApp()">Submit Order</button>
+    </div>
 </div>
+
+<footer>
+    <p>Owner: @shivam_singh_2586</p>
+    <p>&copy; 2026 BYSOCIALIG</p>
+</footer>
+
+<script>
+    let selectedService = "";
+
+    function openOrder(service) {
+        selectedService = service;
+        document.getElementById('serviceName').innerText = service;
+        document.getElementById('orderModal').style.display = "block";
+    }
+
+    function closeOrder() {
+        document.getElementById('orderModal').style.display = "none";
+        document.getElementById('userLink').value = "";
+    }
+
+    function sendToWhatsApp() {
+        let link = document.getElementById('userLink').value;
+        if(link.trim() === "") {
+            alert("Bhai, Instagram link toh daalo!");
+            return;
+        }
+        let phone = "919122635530";
+        let message = "Hi BYSOCIALIG! Mera naya order hai:\n\n" + 
+                      "*Service:* " + selectedService + "\n" +
+                      "*Link:* " + link;
+        
+        let url = "https://wa.me/" + phone + "?text=" + encodeURIComponent(message);
+        window.open(url, '_blank');
+        closeOrder();
+    }
+</script>
 
 </body>
 </html>
