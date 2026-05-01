@@ -1,48 +1,82 @@
-<!DOCTYPE html>
-<html lang="hi">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>BYSOCIALIG | Founder Shivam Singh</title>
-    <style>
-        body { font-family: Arial, sans-serif; background-color: #f8f9fa; margin: 0; padding: 10px; text-align: center; }
-        .header { background: #00c853; color: white; padding: 15px; border-radius: 30px; font-weight: bold; margin-bottom: 20px; }
-        .founder-img { width: 100px; height: 100px; border-radius: 50%; border: 3px solid #ff4081; margin-top: 10px; }
-        .card { background: white; border-radius: 15px; padding: 20px; margin-bottom: 15px; box-shadow: 0 4px 8px rgba(0,0,0,0.1); border: 1px solid #eee; }
-        .shayari-text { font-size: 18px; color: #333; margin-bottom: 15px; font-weight: 500; }
-        .btn-copy { background: #ff4081; color: white; border: none; padding: 10px 20px; border-radius: 20px; cursor: pointer; font-weight: bold; }
-        .btn-whatsapp { background: #25d366; color: white; border: none; padding: 15px; width: 100%; border-radius: 10px; font-size: 18px; font-weight: bold; margin-top: 10px; display: block; text-decoration: none; }
-    </style>
-</head>
-<body>
+<style>
+    /* ...purani baaki CSS waisi hi rahegi... */
 
-    <div class="header">Social Boost Pro - BYSOCIALIG</div>
+    .card {
+        background-color: white;
+        border-radius: 15px;
+        padding: 0; /* Padding hum text aur buttons ke liye alag se denge */
+        margin-bottom: 20px;
+        box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+        overflow: hidden; /* Taaki photo corners ke bahar na jaye */
+        border: 1px solid #eee;
+        position: relative; /* Text overlay ke liye */
+    }
 
-    <img src="YOUR_PHOTO_URL_HERE" alt="Shivam Singh" class="founder-img">
-    <h3>Founder: Shivam Singh</h3>
+    .shayari-overlay {
+        /* Background image set karein */
+        background-image: url('YOUR_PHOTO_FILENAME_OR_LINK.jpg'); 
+        background-size: cover; /* Photo puri card space fill karegi */
+        background-position: center; /* Photo center mein rahegi */
+        padding: 25px 15px; /* Text aur buttons ke liye padding */
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        color: white; /* Text white rakhein taaki dark photo par dikhe */
+        position: relative;
+    }
 
-    <div class="card">
-        <p class="shayari-text" id="sh1">Humne toh usse apni duniya maana tha, 🌎<br>Par usne toh hamein sirf ek musafir jaana tha. 🚶‍♂️💔</p>
-        <button class="btn-copy" onclick="copy('sh1')">📋 Copy Shayari</button>
+    /* Dark overlay taaki text aur saaf dikhe */
+    .shayari-overlay::before {
+        content: "";
+        position: absolute;
+        top: 0; left: 0; right: 0; bottom: 0;
+        background: rgba(0,0,0,0.4); /* Thoda kaala overlay (0.4 se adjust kar sakte hain) */
+    }
+
+    .shayari-text {
+        font-family: 'Georgia', serif; /* Shayri ke liye thoda stylish font */
+        font-size: 19px;
+        line-height: 1.6;
+        text-align: center;
+        margin-bottom: 20px;
+        text-shadow: 1px 1px 3px rgba(0,0,0,0.7); /* Text shadow se text aur highlight hoga */
+        z-index: 1; /* Overlay ke upar text */
+    }
+
+    .btn-copy {
+        background: #ff4081;
+        color: white;
+        border: none;
+        padding: 12px 25px;
+        border-radius: 25px;
+        cursor: pointer;
+        font-weight: bold;
+        z-index: 1; /* Overlay ke upar button */
+        transition: 0.3s;
+    }
+
+    .btn-copy:hover {
+        background: #e91e63;
+    }
+</style>
+
+<div class="card">
+    <div class="shayari-overlay">
+        <p class="shayari-text" id="sh1">
+            Humne toh usse apni duniya maana tha, 🌎<br>
+            Par usne toh hamein sirf ek musafir jaana tha. 🚶‍♂️💔
+        </p>
+        <button class="btn-copy" onclick="copyText('sh1')">📋 Copy Shayari</button>
     </div>
+</div>
 
-    <div class="card">
-        <p class="shayari-text" id="sh2">Mohabbat ka koi kasoor nahi hota, 🥀<br>Bas log hi galat mil jaate hain. 😔🙌</p>
-        <button class="btn-copy" onclick="copy('sh2')">📋 Copy Shayari</button>
+<div class="card">
+    <div class="shayari-overlay">
+        <p class="shayari-text" id="sh2">
+            Mohabbat ka koi kasoor nahi hota, 🥀<br>
+            Bas log hi galat mil jaate hain. 😔🙌
+        </p>
+        <button class="btn-copy" onclick="copyText('sh2')">📋 Copy Shayari</button>
     </div>
-
-    <a href="https://wa.me/YOUR_NUMBER" class="btn-whatsapp">💬 24x7 Customer Support</a>
-
-    <script>
-        function copy(id) {
-            var text = document.getElementById(id).innerText;
-            navigator.clipboard.writeText(text);
-            alert("Shayari Copy Ho Gayi!");
-        }
-    </script>
-
-</body>
-</html>
-<a href="tel:+9198XXXXXXXX" class="btn" style="background: #007bff; color: white;">
-   📞 Call Founder: Shivam Singh
-</a>
+</div>
