@@ -1,239 +1,114 @@
-<!DOCTYPE html>
-<html lang="hi">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>BYSOCIALIG - Premium SMM Services</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
-    <style>
-        :root { --primary: #007bff; --secondary: #6610f2; --success: #25d366; --dark: #121212; }
-        * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Poppins', sans-serif; }
-        body { background: #f8f9fa; color: #333; }
-        
-        /* Navbar Style */
-        nav { background: var(--dark); color: white; padding: 15px 20px; text-align: center; font-weight: bold; font-size: 1.5rem; letter-spacing: 2px; }
-        nav span { color: #ffc107; }
+<div class="founder-header">
+    <div class="profile-container">
+        <div class="profile-pic">
+            <img src="shivam.jpg" alt="Shivam Singh"> </div>
 
-        header { background: linear-gradient(135deg, var(--primary), var(--secondary)); color: white; padding: 60px 20px; text-align: center; border-bottom-left-radius: 40px; border-bottom-right-radius: 40px; box-shadow: 0 4px 15px rgba(0,0,0,0.2); }
-        header h1 { font-size: 3rem; margin-bottom: 10px; }
-        header p { font-size: 1.1rem; opacity: 0.9; }
-
-        .container { max-width: 1100px; margin: -40px auto 50px; padding: 0 20px; }
-
-        .pricing-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 25px; }
-        
-        .card { background: white; border-radius: 20px; overflow: hidden; box-shadow: 0 10px 25px rgba(0,0,0,0.1); transition: 0.3s; border: 1px solid #eee; }
-        .card:hover { transform: translateY(-10px); }
-        
-        .card-header { padding: 25px; text-align: center; color: white; }
-        .h-followers { background: #6f42c1; }
-        .h-likes { background: #e83e8c; }
-        .h-comments { background: #007bff; }
-
-        .price-list { list-style: none; padding: 20px 25px; }
-        .price-list li { display: flex; justify-content: space-between; padding: 12px 0; border-bottom: 1px dashed #ddd; font-weight: 600; }
-        .price-tag { color: #28a745; background: #e8f5e9; padding: 2px 12px; border-radius: 20px; }
-
-        .order-btn { display: block; background: var(--success); color: white; text-align: center; padding: 15px; text-decoration: none; font-weight: bold; border-radius: 0 0 20px 20px; }
-        
-        footer { background: var(--dark); color: white; padding: 40px 20px; text-align: center; margin-top: 50px; }
-        .founder-box { border: 1px solid #444; display: inline-block; padding: 15px 30px; border-radius: 10px; margin-bottom: 20px; }
-        .founder-name { font-size: 1.3rem; color: #ffc107; font-weight: bold; }
-        .social-links a { color: white; margin: 0 10px; font-size: 1.5rem; text-decoration: none; }
-    </style>
-</head>
-<body>
-
-    <nav>BY<span>SOCIAL</span>IG</nav>
-
-    <header>
-        <h1>BYSOCIALIG</h1>
-        <p>Expert Social Media Growth Solutions ⚡</p>
-    </header>
-
-    <div class="container">
-        <div class="pricing-grid">
+        <div class="profile-info">
+            <h1>Shivam Singh</h1>
+            <p class="tagline">Founder of <span>BYSOCIALIG</span></p>
             
-            <div class="card">
-                <div class="card-header h-followers">
-                    <i class="fas fa-users fa-3x"></i>
-                    <h2>Followers</h2>
-                </div>
-                <ul class="price-list">
-                    <li>100 Followers <span class="price-tag">₹10</span></li>
-                    <li>500 Followers <span class="price-tag">₹45</span></li>
-                    <li>1K Followers <span class="price-tag">₹85</span></li>
-                </ul>
-                <a href="https://wa.me/9122635530?text=Order:Followers" class="order-btn">Order on WhatsApp</a>
+            <div class="social-pills">
+                <a href="https://instagram.com/Shivam_singh_2586" class="pill insta">
+                    <i class="fab fa-instagram"></i> @Shivam_singh_2586
+                </a>
+                <a href="https://wa.me/9122635530" class="pill wa">
+                    <i class="fab fa-whatsapp"></i> WhatsApp Me
+                </a>
             </div>
-
-            <div class="card">
-                <div class="card-header h-likes">
-                    <i class="fas fa-heart fa-3x"></i>
-                    <h2>Likes</h2>
-                </div>
-                <ul class="price-list">
-                    <li>100 Likes <span class="price-tag">₹2</span></li>
-                    <li>500 Likes <span class="price-tag">₹8</span></li>
-                    <li>1K Likes <span class="price-tag">₹12</span></li>
-                </ul>
-                <a href="https://wa.me/9122635530?text=Order:Likes" class="order-btn">Order on WhatsApp</a>
-            </div>
-
-            <div class="card">
-                <div class="card-header h-comments">
-                    <i class="fas fa-comment fa-3x"></i>
-                    <h2>Comments</h2>
-                </div>
-                <ul class="price-list">
-                    <li>100 Comments <span class="price-tag">₹3</span></li>
-                    <li>500 Comments <span class="price-tag">₹15</span></li>
-                    <li>1K Comments <span class="price-tag">₹30</span></li>
-                </ul>
-                <a href="https://wa.me/9122635530?text=Order:Comments" class="order-btn">Order on WhatsApp</a>
-            </div>
-
         </div>
     </div>
 
-    <footer>
-        <div class="founder-box">
-            <p>Founder & CEO</p>
-            <div class="founder-name">Shivam Singh</div>
-        </div>
-        <div class="contact-info">
-            <p>WhatsApp: 9122635530</p>
-            <div class="social-links" style="margin-top: 15px;">
-                <a href="https://wa.me/9122635530"><i class="fab fa-whatsapp"></i></a>
-                <a href="https://instagram.com/Shivam_singh_2586"><i class="fab fa-instagram"></i></a>
-            </div>
-        </div>
-        <p style="margin-top: 25px; opacity: 0.5;">&copy; 2026 BYSOCIALIG. All Rights Reserved.</p>
-    </footer>
-
-</body>
-</html>
-<div class="smm-payment-box">
-    <div class="payment-header">
-        <i class="fas fa-wallet"></i>
-        <h3>Add Funds / Pay Now</h3>
+    <div class="shayari-box">
+        <p>"Kamyabi ke safar mein hosle zaroori hain, <br> 
+        Digital duniya mein ab hamari dosti poori hai!" 🚀</p>
     </div>
-
-    <div class="qr-container">
-        <p>Scan this QR to Pay</p>
-        <div class="qr-image">
-            <img src="qr.jpg" alt="UPI QR Code">
-        </div>
-        <div class="upi-id-display">
-            <span>9122635530@ybl</span>
-            <button onclick="copyUPI()">Copy</button>
-        </div>
-    </div>
-
-    <div class="payment-form">
-        <div class="form-group">
-            <label>Transaction ID / UTR No.</label>
-            <input type="text" id="txnID" placeholder="Enter 12 digit Transaction ID" required>
-        </div>
-        <div class="form-group">
-            <label>Amount (₹)</label>
-            <input type="number" id="payAmount" placeholder="Enter Amount Paid" required>
-        </div>
-        <button class="submit-pay-btn" onclick="submitPayment()">
-            <i class="fas fa-check-circle"></i> Submit Payment
-        </button>
-    </div>
-    
-    <p class="note">*Payment karne ke baad Transaction ID zaroor bharein.</p>
 </div>
 
 <style>
-    .smm-payment-box {
-        background: white;
-        max-width: 450px;
-        margin: 40px auto;
-        border-radius: 15px;
-        box-shadow: 0 10px 25px rgba(0,0,0,0.15);
-        overflow: hidden;
-        border: 1px solid #ddd;
+    /* Professional Header Styling */
+    .founder-header {
+        background: linear-gradient(135deg, #121212, #1a1a1a);
+        color: white;
+        padding: 40px 20px;
+        text-align: center;
+        border-bottom: 3px solid #ffc107;
+        border-radius: 0 0 30px 30px;
     }
-    .payment-header {
-        background: #1a1a1a;
-        color: #ffc107;
-        padding: 20px;
-        font-size: 1.2rem;
+
+    .profile-container {
         display: flex;
+        flex-direction: column;
         align-items: center;
-        justify-content: center;
-        gap: 10px;
+        gap: 20px;
     }
-    .qr-container { padding: 20px; border-bottom: 1px solid #eee; }
-    .qr-image img {
-        width: 200px;
-        height: 200px;
-        border: 5px solid #f8f9fa;
-        border-radius: 10px;
-        margin: 10px 0;
+
+    .profile-pic img {
+        width: 120px;
+        height: 120px;
+        border-radius: 50%;
+        border: 4px solid #ffc107;
+        box-shadow: 0 0 20px rgba(255, 193, 7, 0.3);
+        object-fit: cover;
     }
-    .upi-id-display {
-        background: #f1f1f1;
-        padding: 8px 15px;
-        border-radius: 50px;
-        display: inline-flex;
-        align-items: center;
-        gap: 10px;
-        font-size: 0.9rem;
-        font-weight: bold;
+
+    .profile-info h1 {
+        font-size: 2.2rem;
+        margin-bottom: 5px;
+        letter-spacing: 1px;
     }
-    .upi-id-display button {
-        background: #007bff;
-        color: white;
-        border: none;
-        padding: 3px 10px;
-        border-radius: 20px;
-        cursor: pointer;
-    }
-    .payment-form { padding: 20px; text-align: left; }
-    .form-group { margin-bottom: 15px; }
-    .form-group label { display: block; margin-bottom: 5px; font-weight: 600; font-size: 0.9rem; }
-    .form-group input {
-        width: 100%;
-        padding: 12px;
-        border: 1px solid #ccc;
-        border-radius: 8px;
-        outline: none;
-    }
-    .submit-pay-btn {
-        width: 100%;
-        background: #28a745;
-        color: white;
-        padding: 15px;
-        border: none;
-        border-radius: 8px;
+
+    .tagline {
         font-size: 1.1rem;
+        color: #ccc;
+        margin-bottom: 20px;
+    }
+
+    .tagline span {
+        color: #ffc107;
         font-weight: bold;
-        cursor: pointer;
+    }
+
+    .social-pills {
+        display: flex;
+        gap: 15px;
+        justify-content: center;
+        flex-wrap: wrap;
+    }
+
+    .pill {
+        padding: 8px 20px;
+        border-radius: 50px;
+        text-decoration: none;
+        color: white;
+        font-weight: bold;
+        font-size: 0.9rem;
         transition: 0.3s;
     }
-    .submit-pay-btn:hover { background: #218838; }
-    .note { font-size: 12px; color: red; padding-bottom: 15px; }
+
+    .insta { background: linear-gradient(45deg, #f09433, #e6683c, #dc2743, #cc2366, #bc1888); }
+    .wa { background: #25d366; }
+    .pill:hover { transform: scale(1.05); box-shadow: 0 5px 15px rgba(0,0,0,0.3); }
+
+    .shayari-box {
+        margin-top: 30px;
+        font-style: italic;
+        background: rgba(255, 255, 255, 0.05);
+        padding: 15px;
+        border-radius: 10px;
+        border-left: 4px solid #ffc107;
+        max-width: 500px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .shayari-box p {
+        color: #ddd;
+        font-size: 1.1rem;
+        line-height: 1.5;
+    }
+
+    /* Mobile Responsive */
+    @media (max-width: 600px) {
+        .profile-info h1 { font-size: 1.8rem; }
+    }
 </style>
-
-<script>
-    function copyUPI() {
-        navigator.clipboard.writeText("9122635530@ybl");
-        alert("UPI ID Copied!");
-    }
-
-    function submitPayment() {
-        var txn = document.getElementById("txnID").value;
-        var amt = document.getElementById("payAmount").value;
-        if(txn == "" || amt == "") {
-            alert("Please enter Transaction ID and Amount");
-            return;
-        }
-        var msg = "Hi Shivam Singh, Maine Payment kar di hai.%0A%0ATransaction ID: " + txn + "%0AAmaunt: ₹" + amt;
-        window.open("https://wa.me/9122635530?text=" + msg, '_blank');
-    }
-</script>
-
