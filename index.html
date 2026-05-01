@@ -3,123 +3,84 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>BYSOCIALIG - Shivam Singh Special</title>
+    <title>Shivam Singh - Dard-e-Dil Shayari</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <style>
-        :root { --gold: #ffc107; --dark-bg: #0a0a0a; }
-        body { background-color: var(--dark-bg); color: white; font-family: 'Poppins', sans-serif; margin: 0; padding-bottom: 50px; }
-
-        /* Unique Founder Section */
-        .founder-card {
-            text-align: center;
-            padding: 40px 20px;
-            background: linear-gradient(180deg, #1a1a1a 0%, #0a0a0a 100%);
-            border-bottom: 2px solid var(--gold);
+        body { background: #000; color: white; font-family: 'Poppins', sans-serif; text-align: center; padding-bottom: 50px; }
+        .header { padding: 40px 20px; background: linear-gradient(180deg, #111, #000); border-bottom: 2px solid #ffc107; }
+        .main-pic { width: 130px; height: 130px; border-radius: 50%; border: 3px solid #ffc107; box-shadow: 0 0 20px #ffc107; margin-bottom: 10px; object-fit: cover; }
+        h1 { margin: 5px 0; color: #ffc107; }
+        
+        .shayari-grid { max-width: 600px; margin: 20px auto; padding: 10px; }
+        
+        .shayari-card { 
+            background: #1a1a1a; border-radius: 20px; padding: 20px; margin-bottom: 30px;
+            border-top: 5px solid; transition: 0.3s; box-shadow: 0 10px 20px rgba(0,0,0,0.5);
         }
-        .founder-photo {
-            width: 150px; height: 150px;
-            border-radius: 50%;
-            border: 4px solid var(--gold);
-            margin-bottom: 15px;
-            box-shadow: 0 0 25px rgba(255, 193, 7, 0.4);
-            object-fit: cover;
-        }
-        .founder-name { font-size: 2rem; margin: 0; color: white; letter-spacing: 1px; }
-        .insta-id { color: var(--gold); text-decoration: none; font-weight: bold; font-size: 1.1rem; }
+        .user-pic { width: 50px; height: 50px; border-radius: 50%; border: 2px solid white; margin-bottom: 10px; }
+        .text { font-size: 1.2rem; margin-bottom: 20px; line-height: 1.6; font-style: italic; }
+        
+        .actions { display: flex; justify-content: center; gap: 10px; }
+        .btn { padding: 8px 15px; border-radius: 50px; border: none; cursor: pointer; font-weight: bold; font-size: 0.8rem; }
+        .copy-btn { background: #ffc107; color: black; }
+        .share-btn { background: #25d366; color: white; text-decoration: none; }
 
-        /* Shayari Container */
-        .shayari-grid {
-            max-width: 800px;
-            margin: 30px auto;
-            padding: 0 15px;
-            display: grid;
-            gap: 25px;
-        }
-
-        /* Unique Colored Shayari Box */
-        .shayari-box {
-            background: #151515;
-            padding: 25px;
-            border-radius: 20px;
-            text-align: center;
-            border-left: 8px solid;
-            transition: 0.3s;
-            position: relative;
-            box-shadow: 0 5px 15px rgba(0,0,0,0.5);
-        }
-        .shayari-box:hover { transform: scale(1.02); }
-
-        .shayari-box img {
-            width: 50px; height: 50px;
-            border-radius: 50%;
-            border: 2px solid white;
-            margin-bottom: 10px;
-        }
-
-        .shayari-text { font-size: 1.2rem; line-height: 1.6; font-style: italic; color: #eee; }
-
-        /* Different Colors for Boxes */
-        .color-1 { border-color: #ff4757; }
-        .color-2 { border-color: #3742fa; }
-        .color-3 { border-color: #2ed573; }
-        .color-4 { border-color: #ffa502; }
-        .color-5 { border-color: #e83e8c; }
-
-        .btn-wa {
-            display: inline-block;
-            background: #25d366;
-            color: white;
-            padding: 12px 25px;
-            border-radius: 50px;
-            text-decoration: none;
-            margin-top: 20px;
-            font-weight: bold;
-        }
+        /* Multi Colors */
+        .c1 { border-color: #ff4757; } .c2 { border-color: #2f3542; } .c3 { border-color: #2ed573; }
+        .c4 { border-color: #ffa502; } .c5 { border-color: #1e90ff; } .c6 { border-color: #e83e8c; }
     </style>
 </head>
 <body>
 
-    <div class="founder-card">
-        <img src="shivam.jpg" alt="Shivam Singh" class="founder-photo">
-        <h1 class="founder-name">Shivam Singh</h1>
-        <a href="https://instagram.com/Shivam_singh_2586" class="insta-id">@Shivam_singh_2586</a>
-        <br>
-        <a href="https://wa.me/9122635530" class="btn-wa"><i class="fab fa-whatsapp"></i> Chat on WhatsApp</a>
+    <div class="header">
+        <img src="shivam.jpg" class="main-pic" alt="Shivam Singh">
+        <h1>Shivam Singh</h1>
+        <p>@Shivam_singh_2586</p>
     </div>
 
-    <div class="shayari-grid">
-        
-        <div class="shayari-box color-1">
-            <img src="shivam.jpg" alt="Shivam">
-            <p class="shayari-text">"Mohabbat ka nateeja humne duniya mein yahi dekha, <br> Jise dil mein basaya tha use naseeb mein nahi dekha." 💔🥺</p>
+    <div class="shayari-grid" id="shayariContainer">
         </div>
 
-        <div class="shayari-box color-2">
-            <img src="shivam.jpg" alt="Shivam">
-            <p class="shayari-text">"Dard ki mehfil mein hum bhi gaye the, <br> Par wahan humse bade dard-e-dil wale mile." 🥀🌑</p>
-        </div>
-
-        <div class="shayari-box color-3">
-            <img src="shivam.jpg" alt="Shivam">
-            <p class="shayari-text">"Zakhm jab mere seene ke bhar jayenge, <br> Aansu bhi moti bankar bikhar jayenge." 🌪️😢</p>
-        </div>
-
-        <div class="shayari-box color-4">
-            <img src="shivam.jpg" alt="Shivam">
-            <p class="shayari-text">"Humne toh dil diya tha magar unhone thukra diya, <br> Is digital duniya ne humein jeena sikha diya." 📱🖤</p>
-        </div>
-
-        <div class="shayari-box color-5">
-            <img src="shivam.jpg" alt="Shivam">
-            <p class="shayari-text">"Log puchte hain humse hamari muskurahat ka raaz, <br> Unhe kya pata ye humare dukhon ka libas hai." 🎭🥀</p>
-        </div>
-
-    </div>
-
-    <footer style="text-align: center; padding: 20px; opacity: 0.5;">
-        &copy; 2026 BYSOCIALIG | Founder Shivam Singh
-    </footer>
-
-</body>
-</html>
-
+    <script>
+        const shayaris = [
+            "Mohabbat ka nateeja humne duniya mein yahi dekha, Jise dil mein basaya tha use naseeb mein nahi dekha. 💔",
+            "Dard ki mehfil mein hum bhi gaye the, Par wahan humse bade dard-e-dil wale mile. 🥀",
+            "Zakhm jab mere seene ke bhar jayenge, Aansu bhi moti bankar bikhar jayenge. 🥺",
+            "Log puchte hain humse hamari muskurahat ka raaz, Unhe kya pata ye humare dukhon ka libas hai. 🎭",
+            "Humne toh dil diya tha magar unhone thukra diya, Is digital duniya ne humein jeena sikha diya. 📱",
+            "Kash koi apna ho jo kahe, mat roya kar tere dard se mujhe bhi dard hota hai. 🥀",
+            "Ab akele rehne ki aadat ho gayi hai, unhe khone ke baad zindagi se shikayat ho gayi hai. 🌑",
+            "Waqt ne sikhaya hai har dard ko sehna, par ye dil abhi bhi darta hai kuch kehna. 🌪️",
+            "Wo mera naseeb tha ya mera waham, bas dard hi mila har qadam par humein. 💔",
+            "Ab kisi se koi umeed nahi, khud ke dard ka hum khud hi mureed hain. 🎭",
+            "Zindagi mein sab kuch mila bas wo na mila jisne dil churaya tha. 🥺",
+            "Unki yaadon ka kaafila aaj phir guzar gaya, zakhm purane the par dard naya de gaya. 🥀",
+            "Tanhayi ka aalam mat pucho humse, har lamha ek sadi lagta hai unke bina. 🌑",
+            "Hum toh unhe aaj bhi yaad karte hain, par wo humein bhula chuke hain ye sunkar dard hota hai. 😢",
+            "Pyar karna gunah hai toh humne ye gunah kiya, badle mein dard mila par ye dil fida kiya. 🌪️",
+            "Dil todne walo ne ye nahi socha, ki isme ab bhi unki tasveer baki hai. 💔",
+            "Kamyabi mile na mile ye alag baat hai, par dard se dosti karna ab hamari fitrat hai. 🎭",
+            "Dard likhte hain dard padhte hain, hum tumhare liye kitna tadapte hain. 🥀",
+            "Aansu girte hain toh girne do, dil ke dard ko thoda kam hone do. 😢",
+            "Mera rasta alag hai meri manzil alag hai, mere dard ka dariya sabse alag hai. 🌑",
+            "Ab koi dil lagane ki baat na kare, humne ishq mein bahut dhoke khaye hain. 🌪️",
+            "Mohabbat ki rahon mein dard hi dard hai, humne bhi wahi rasta chuna tha ye hamari bhool hai. 💔",
+            "Zindagi guzregi ab tanhayi ke saath, humne chod diya hai sabka saath. 🥀",
+            "Dil ke dard ko chhupana sikh liya, unke bina ab humne muskurana sikh liya. 🎭",
+            "Gham ki ye baarish ab rukti nahi, hamari ye aankhein ab jhukti nahi. 🥺",
+            "Unka naam aaj bhi mere har dard ki dawa hai, par wo ab kisi aur ki dua hai. 🌑",
+            "Hum toh unki har baat par marte the, par wo kisi aur ke liye ji rahe the. 😢",
+            "Zindagi se ek hi shikayat hai, humein wahi nahi mila jo hamari chahat hai. 🌪️",
+            "Dil ki dhadkan mein dard ka shor hai, par bahar se hum shant hain yahi hamara zor hai. 💔",
+            "Pyar mein wafa ki umeed mat karna, dard hi milega bas ye yaad rakhna. 🥀",
+            "Ab toh andhere se dosti ho gayi hai, roshni se toh dushmani ho gayi hai. 🌑",
+            "Har ek zakhm ka hisab hoga, jab waqt hamara aur jawab tumhara hoga. 🎭",
+            "Dard ka ye silsila khatam nahi hota, har roz naya gham naseeb hota hai. 😢",
+            "Humne unhe chaha unhone kisi aur ko chaha, ye dard ka chakra kabhi khatam na hua. 🌪️",
+            "Dil ke dard ka koi malham nahi hota, jo dard apna ho wo kam nahi hota. 💔",
+            "Wo chale gaye humein tanha chodkar, hum reh gaye apna dil todkar. 🥀",
+            "Mera dard meri pehchan hai, meri shayari mera armaan hai. 🎭",
+            "Log puchte hain tum itna dard kyu likhte ho, unhe kya pata hum dard hi toh jeete hain. 🥺",
+            "Mohabbat thi isliye jaane diya, zid hoti toh kab ka apna bana lete. 🌑",
+            "Ab saari ummeedien khatam ho gayi hain, sirf dard baki reh gaya hai. 🌪️",
+            "S
