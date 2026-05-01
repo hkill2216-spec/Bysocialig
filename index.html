@@ -1,6 +1,45 @@
-<div class="shayari-card">
-  <img src="aapka-photo.jpg" alt="Shivam Singh" class="profile-pic">
-  <p id="shayari1">Humne toh usse apni duniya maana tha... 🌎💔</p>
-  <button onclick="copyText('shayari1')">📋 Copy</button>
-  <button onclick="shareShayari('shayari1')">📤 Share</button>
-</div>
+<!DOCTYPE html>
+<html lang="hi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BYSOCIALIG | Founder Shivam Singh</title>
+    <style>
+        body { font-family: Arial, sans-serif; background-color: #f8f9fa; margin: 0; padding: 10px; text-align: center; }
+        .header { background: #00c853; color: white; padding: 15px; border-radius: 30px; font-weight: bold; margin-bottom: 20px; }
+        .founder-img { width: 100px; height: 100px; border-radius: 50%; border: 3px solid #ff4081; margin-top: 10px; }
+        .card { background: white; border-radius: 15px; padding: 20px; margin-bottom: 15px; box-shadow: 0 4px 8px rgba(0,0,0,0.1); border: 1px solid #eee; }
+        .shayari-text { font-size: 18px; color: #333; margin-bottom: 15px; font-weight: 500; }
+        .btn-copy { background: #ff4081; color: white; border: none; padding: 10px 20px; border-radius: 20px; cursor: pointer; font-weight: bold; }
+        .btn-whatsapp { background: #25d366; color: white; border: none; padding: 15px; width: 100%; border-radius: 10px; font-size: 18px; font-weight: bold; margin-top: 10px; display: block; text-decoration: none; }
+    </style>
+</head>
+<body>
+
+    <div class="header">Social Boost Pro - BYSOCIALIG</div>
+
+    <img src="YOUR_PHOTO_URL_HERE" alt="Shivam Singh" class="founder-img">
+    <h3>Founder: Shivam Singh</h3>
+
+    <div class="card">
+        <p class="shayari-text" id="sh1">Humne toh usse apni duniya maana tha, 🌎<br>Par usne toh hamein sirf ek musafir jaana tha. 🚶‍♂️💔</p>
+        <button class="btn-copy" onclick="copy('sh1')">📋 Copy Shayari</button>
+    </div>
+
+    <div class="card">
+        <p class="shayari-text" id="sh2">Mohabbat ka koi kasoor nahi hota, 🥀<br>Bas log hi galat mil jaate hain. 😔🙌</p>
+        <button class="btn-copy" onclick="copy('sh2')">📋 Copy Shayari</button>
+    </div>
+
+    <a href="https://wa.me/YOUR_NUMBER" class="btn-whatsapp">💬 24x7 Customer Support</a>
+
+    <script>
+        function copy(id) {
+            var text = document.getElementById(id).innerText;
+            navigator.clipboard.writeText(text);
+            alert("Shayari Copy Ho Gayi!");
+        }
+    </script>
+
+</body>
+</html>
