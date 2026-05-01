@@ -3,124 +3,113 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>BYSOCIALIG | Best SMM Panel</title>
+    <title>BYSOCIALIG - Premium SMM Services</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <style>
-        :root { --insta-grad: linear-gradient(45deg, #f09433, #e6683c, #dc2743, #cc2366, #bc1888); --whatsapp: #25D366; --blue: #007bff; }
-        body { font-family: 'Segoe UI', sans-serif; margin: 0; background-color: #f4f4f4; color: #333; line-height: 1.6; }
-        header { background: var(--insta-grad); color: white; padding: 40px 20px; text-align: center; }
-        h1 { margin: 0; font-size: 2.5em; letter-spacing: 3px; }
-        .container { max-width: 600px; margin: auto; padding: 20px; }
-
-        /* Navigation Style Tabs */
-        .nav-tabs { display: flex; justify-content: space-around; background: white; padding: 10px; margin-bottom: 20px; border-radius: 10px; box-shadow: 0 2px 5px rgba(0,0,0,0.1); }
-        .nav-tabs button { border: none; background: none; font-weight: bold; color: #666; cursor: pointer; padding: 10px; }
-        .nav-tabs button.active { color: #cc2366; border-bottom: 2px solid #cc2366; }
-
-        /* Section Cards */
-        .section { background: white; border-radius: 15px; padding: 20px; margin-bottom: 20px; box-shadow: 0 4px 10px rgba(0,0,0,0.05); }
-        .section-title { font-size: 1.3em; margin-bottom: 15px; color: #cc2366; font-weight: bold; display: block; text-align: center; }
+        :root { --primary: #007bff; --secondary: #6610f2; --success: #25d366; --dark: #121212; }
+        * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Poppins', sans-serif; }
+        body { background: #f8f9fa; color: #333; }
         
-        .offer-card { display: flex; justify-content: space-between; align-items: center; padding: 10px 0; border-bottom: 1px solid #eee; }
-        .btn { background: var(--whatsapp); color: white; border: none; padding: 8px 15px; border-radius: 8px; font-weight: bold; cursor: pointer; text-decoration: none; font-size: 0.9em; }
+        /* Navbar Style */
+        nav { background: var(--dark); color: white; padding: 15px 20px; text-align: center; font-weight: bold; font-size: 1.5rem; letter-spacing: 2px; }
+        nav span { color: #ffc107; }
 
-        /* Add Fund Section */
-        .fund-box { text-align: center; }
-        .qr-placeholder { width: 200px; height: 200px; background: #eee; margin: 15px auto; border: 2px dashed #ccc; border-radius: 10px; display: flex; align-items: center; justify-content: center; }
-        .instruction { font-size: 0.9em; color: #666; background: #fff9c4; padding: 10px; border-radius: 8px; margin-top: 10px; }
+        header { background: linear-gradient(135deg, var(--primary), var(--secondary)); color: white; padding: 60px 20px; text-align: center; border-bottom-left-radius: 40px; border-bottom-right-radius: 40px; box-shadow: 0 4px 15px rgba(0,0,0,0.2); }
+        header h1 { font-size: 3rem; margin-bottom: 10px; }
+        header p { font-size: 1.1rem; opacity: 0.9; }
 
-        /* Popup Modal */
-        .modal { display: none; position: fixed; z-index: 2000; left: 0; top: 0; width: 100%; height: 100%; background: rgba(0,0,0,0.8); }
-        .modal-content { background: white; margin: 20% auto; padding: 25px; border-radius: 20px; width: 85%; max-width: 400px; text-align: center; }
-        input { width: 90%; padding: 12px; margin: 15px 0; border: 1px solid #ccc; border-radius: 8px; }
+        .container { max-width: 1100px; margin: -40px auto 50px; padding: 0 20px; }
 
-        footer { background: #111; color: #888; padding: 30px; text-align: center; margin-top: 50px; }
+        .pricing-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 25px; }
+        
+        .card { background: white; border-radius: 20px; overflow: hidden; box-shadow: 0 10px 25px rgba(0,0,0,0.1); transition: 0.3s; border: 1px solid #eee; }
+        .card:hover { transform: translateY(-10px); }
+        
+        .card-header { padding: 25px; text-align: center; color: white; }
+        .h-followers { background: #6f42c1; }
+        .h-likes { background: #e83e8c; }
+        .h-comments { background: #007bff; }
+
+        .price-list { list-style: none; padding: 20px 25px; }
+        .price-list li { display: flex; justify-content: space-between; padding: 12px 0; border-bottom: 1px dashed #ddd; font-weight: 600; }
+        .price-tag { color: #28a745; background: #e8f5e9; padding: 2px 12px; border-radius: 20px; }
+
+        .order-btn { display: block; background: var(--success); color: white; text-align: center; padding: 15px; text-decoration: none; font-weight: bold; border-radius: 0 0 20px 20px; }
+        
+        footer { background: var(--dark); color: white; padding: 40px 20px; text-align: center; margin-top: 50px; }
+        .founder-box { border: 1px solid #444; display: inline-block; padding: 15px 30px; border-radius: 10px; margin-bottom: 20px; }
+        .founder-name { font-size: 1.3rem; color: #ffc107; font-weight: bold; }
+        .social-links a { color: white; margin: 0 10px; font-size: 1.5rem; text-decoration: none; }
     </style>
 </head>
 <body>
 
-<header>
-    <h1>BYSOCIALIG</h1>
-    <p>India's No.1 Fast SMM Panel</p>
-</header>
+    <nav>BY<span>SOCIAL</span>IG</nav>
 
-<div class="container">
-    
-    <div class="section fund-box">
-        <span class="section-title">💰 ADD FUND (PAYMENT)</span>
-        <p>Wallet mein balance add karne ke liye niche scan karein:</p>
-        <div class="qr-placeholder">
-            <span>[ SCAN QR CODE ]</span>
+    <header>
+        <h1>BYSOCIALIG</h1>
+        <p>Expert Social Media Growth Solutions ⚡</p>
+    </header>
+
+    <div class="container">
+        <div class="pricing-grid">
+            
+            <div class="card">
+                <div class="card-header h-followers">
+                    <i class="fas fa-users fa-3x"></i>
+                    <h2>Followers</h2>
+                </div>
+                <ul class="price-list">
+                    <li>100 Followers <span class="price-tag">₹10</span></li>
+                    <li>500 Followers <span class="price-tag">₹45</span></li>
+                    <li>1K Followers <span class="price-tag">₹85</span></li>
+                </ul>
+                <a href="https://wa.me/9122635530?text=Order:Followers" class="order-btn">Order on WhatsApp</a>
+            </div>
+
+            <div class="card">
+                <div class="card-header h-likes">
+                    <i class="fas fa-heart fa-3x"></i>
+                    <h2>Likes</h2>
+                </div>
+                <ul class="price-list">
+                    <li>100 Likes <span class="price-tag">₹2</span></li>
+                    <li>500 Likes <span class="price-tag">₹8</span></li>
+                    <li>1K Likes <span class="price-tag">₹12</span></li>
+                </ul>
+                <a href="https://wa.me/9122635530?text=Order:Likes" class="order-btn">Order on WhatsApp</a>
+            </div>
+
+            <div class="card">
+                <div class="card-header h-comments">
+                    <i class="fas fa-comment fa-3x"></i>
+                    <h2>Comments</h2>
+                </div>
+                <ul class="price-list">
+                    <li>100 Comments <span class="price-tag">₹3</span></li>
+                    <li>500 Comments <span class="price-tag">₹15</span></li>
+                    <li>1K Comments <span class="price-tag">₹30</span></li>
+                </ul>
+                <a href="https://wa.me/9122635530?text=Order:Comments" class="order-btn">Order on WhatsApp</a>
+            </div>
+
         </div>
-        <div class="instruction">
-            <b>Note:</b> Payment karne ke baad screenshot aur apni <b>User ID</b> WhatsApp par bhejein. Fund 5 minute mein add ho jayega.
-        </div>
-        <br>
-        <a href="https://wa.me/919122635530?text=Hi, Maine payment kar di hai, fund add kar do." class="btn" style="background:#007bff;">BHEJEIN SCREENSHOT 📲</a>
     </div>
 
-    <div class="section">
-        <span class="section-title">🎁 SPECIAL OFFERS</span>
-        <div class="offer-card">
-            <div><b>1K REEL VIEWS</b><br><small style="color:green;">Price: FREE</small></div>
-            <button class="btn" onclick="openOrder('1K Free Views')">ORDER</button>
+    <footer>
+        <div class="founder-box">
+            <p>Founder & CEO</p>
+            <div class="founder-name">Shivam Singh</div>
         </div>
-        <div class="offer-card">
-            <div><b>1K FOLLOWERS</b><br><small style="color:red;">Price: ₹49</small></div>
-            <button class="btn" onclick="openOrder('1K Followers (Paid)')">BUY</button>
+        <div class="contact-info">
+            <p>WhatsApp: 9122635530</p>
+            <div class="social-links" style="margin-top: 15px;">
+                <a href="https://wa.me/9122635530"><i class="fab fa-whatsapp"></i></a>
+                <a href="https://instagram.com/Shivam_singh_2586"><i class="fab fa-instagram"></i></a>
+            </div>
         </div>
-    </div>
-
-</div>
-
-<div id="orderModal" class="modal">
-    <div class="modal-content">
-        <h2 id="serviceName" style="color:#cc2366;">Order</h2>
-        <p>Apne Instagram Link daalein:</p>
-        <input type="text" id="userLink" placeholder="https://instagram.com/...">
-        <br>
-        <button onclick="closeOrder()" style="padding:10px; border:none; border-radius:8px; cursor:pointer;">Cancel</button>
-        <button class="btn" onclick="sendToWhatsApp()" style="margin-left:10px;">Submit Order</button>
-    </div>
-</div>
-
-<footer>
-    <p>Owner: @shivam_singh_2586</p>
-    <p>&copy; 2026 BYSOCIALIG</p>
-</footer>
-
-<script>
-    let selectedService = "";
-    function openOrder(service) {
-        selectedService = service;
-        document.getElementById('serviceName').innerText = service;
-        document.getElementById('orderModal').style.display = "block";
-    }
-    function closeOrder() {
-        document.getElementById('orderModal').style.display = "none";
-    }
-    function sendToWhatsApp() {
-        let link = document.getElementById('userLink').value;
-        if(!link) { alert("Link daalna zaroori hai!"); return; }
-        let msg = "Hi BYSOCIALIG!\nOrder: " + selectedService + "\nLink: " + link;
-        window.open("https://wa.me/919122635530?text=" + encodeURIComponent(msg));
-        closeOrder();
-    }
-</script>
+        <p style="margin-top: 25px; opacity: 0.5;">&copy; 2026 BYSOCIALIG. All Rights Reserved.</p>
+    </footer>
 
 </body>
 </html>
-<div class="product-card">
-    <img src="your-product.jpg" alt="Product Name">
-    <h2>Product Ka Naam</h2>
-    <p>Price: ₹500</p>
-    
-    <div class="payment-section">
-        <p>Scan to Pay:</p>
-        <img src="your-qr-code.jpg" width="150">
-    </div>
-
-    <a href="https://wa.me/91YOURNUMBER?text=Maine payment kar di hai, mera order confirm karein" class="whatsapp-btn">
-        Order on WhatsApp
-    </a>
-</div>
-
