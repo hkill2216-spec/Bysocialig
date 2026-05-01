@@ -113,3 +113,127 @@
 
 </body>
 </html>
+<div class="smm-payment-box">
+    <div class="payment-header">
+        <i class="fas fa-wallet"></i>
+        <h3>Add Funds / Pay Now</h3>
+    </div>
+
+    <div class="qr-container">
+        <p>Scan this QR to Pay</p>
+        <div class="qr-image">
+            <img src="qr.jpg" alt="UPI QR Code">
+        </div>
+        <div class="upi-id-display">
+            <span>9122635530@ybl</span>
+            <button onclick="copyUPI()">Copy</button>
+        </div>
+    </div>
+
+    <div class="payment-form">
+        <div class="form-group">
+            <label>Transaction ID / UTR No.</label>
+            <input type="text" id="txnID" placeholder="Enter 12 digit Transaction ID" required>
+        </div>
+        <div class="form-group">
+            <label>Amount (₹)</label>
+            <input type="number" id="payAmount" placeholder="Enter Amount Paid" required>
+        </div>
+        <button class="submit-pay-btn" onclick="submitPayment()">
+            <i class="fas fa-check-circle"></i> Submit Payment
+        </button>
+    </div>
+    
+    <p class="note">*Payment karne ke baad Transaction ID zaroor bharein.</p>
+</div>
+
+<style>
+    .smm-payment-box {
+        background: white;
+        max-width: 450px;
+        margin: 40px auto;
+        border-radius: 15px;
+        box-shadow: 0 10px 25px rgba(0,0,0,0.15);
+        overflow: hidden;
+        border: 1px solid #ddd;
+    }
+    .payment-header {
+        background: #1a1a1a;
+        color: #ffc107;
+        padding: 20px;
+        font-size: 1.2rem;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 10px;
+    }
+    .qr-container { padding: 20px; border-bottom: 1px solid #eee; }
+    .qr-image img {
+        width: 200px;
+        height: 200px;
+        border: 5px solid #f8f9fa;
+        border-radius: 10px;
+        margin: 10px 0;
+    }
+    .upi-id-display {
+        background: #f1f1f1;
+        padding: 8px 15px;
+        border-radius: 50px;
+        display: inline-flex;
+        align-items: center;
+        gap: 10px;
+        font-size: 0.9rem;
+        font-weight: bold;
+    }
+    .upi-id-display button {
+        background: #007bff;
+        color: white;
+        border: none;
+        padding: 3px 10px;
+        border-radius: 20px;
+        cursor: pointer;
+    }
+    .payment-form { padding: 20px; text-align: left; }
+    .form-group { margin-bottom: 15px; }
+    .form-group label { display: block; margin-bottom: 5px; font-weight: 600; font-size: 0.9rem; }
+    .form-group input {
+        width: 100%;
+        padding: 12px;
+        border: 1px solid #ccc;
+        border-radius: 8px;
+        outline: none;
+    }
+    .submit-pay-btn {
+        width: 100%;
+        background: #28a745;
+        color: white;
+        padding: 15px;
+        border: none;
+        border-radius: 8px;
+        font-size: 1.1rem;
+        font-weight: bold;
+        cursor: pointer;
+        transition: 0.3s;
+    }
+    .submit-pay-btn:hover { background: #218838; }
+    .note { font-size: 12px; color: red; padding-bottom: 15px; }
+</style>
+
+<script>
+    function copyUPI() {
+        navigator.clipboard.writeText("9122635530@ybl");
+        alert("UPI ID Copied!");
+    }
+
+    function submitPayment() {
+        var txn = document.getElementById("txnID").value;
+        var amt = document.getElementById("payAmount").value;
+        if(txn == "" || amt == "") {
+            alert("Please enter Transaction ID and Amount");
+            return;
+        }
+        var msg = "Hi Shivam Singh, Maine Payment kar di hai.%0A%0ATransaction ID: " + txn + "%0AAmaunt: ₹" + amt;
+        window.open("https://wa.me/9122635530?text=" + msg, '_blank');
+    }
+</script>
+
