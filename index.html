@@ -1,114 +1,125 @@
-<div class="founder-header">
-    <div class="profile-container">
-        <div class="profile-pic">
-            <img src="shivam.jpg" alt="Shivam Singh"> </div>
+<!DOCTYPE html>
+<html lang="hi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BYSOCIALIG - Shivam Singh Special</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        :root { --gold: #ffc107; --dark-bg: #0a0a0a; }
+        body { background-color: var(--dark-bg); color: white; font-family: 'Poppins', sans-serif; margin: 0; padding-bottom: 50px; }
 
-        <div class="profile-info">
-            <h1>Shivam Singh</h1>
-            <p class="tagline">Founder of <span>BYSOCIALIG</span></p>
-            
-            <div class="social-pills">
-                <a href="https://instagram.com/Shivam_singh_2586" class="pill insta">
-                    <i class="fab fa-instagram"></i> @Shivam_singh_2586
-                </a>
-                <a href="https://wa.me/9122635530" class="pill wa">
-                    <i class="fab fa-whatsapp"></i> WhatsApp Me
-                </a>
-            </div>
+        /* Unique Founder Section */
+        .founder-card {
+            text-align: center;
+            padding: 40px 20px;
+            background: linear-gradient(180deg, #1a1a1a 0%, #0a0a0a 100%);
+            border-bottom: 2px solid var(--gold);
+        }
+        .founder-photo {
+            width: 150px; height: 150px;
+            border-radius: 50%;
+            border: 4px solid var(--gold);
+            margin-bottom: 15px;
+            box-shadow: 0 0 25px rgba(255, 193, 7, 0.4);
+            object-fit: cover;
+        }
+        .founder-name { font-size: 2rem; margin: 0; color: white; letter-spacing: 1px; }
+        .insta-id { color: var(--gold); text-decoration: none; font-weight: bold; font-size: 1.1rem; }
+
+        /* Shayari Container */
+        .shayari-grid {
+            max-width: 800px;
+            margin: 30px auto;
+            padding: 0 15px;
+            display: grid;
+            gap: 25px;
+        }
+
+        /* Unique Colored Shayari Box */
+        .shayari-box {
+            background: #151515;
+            padding: 25px;
+            border-radius: 20px;
+            text-align: center;
+            border-left: 8px solid;
+            transition: 0.3s;
+            position: relative;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.5);
+        }
+        .shayari-box:hover { transform: scale(1.02); }
+
+        .shayari-box img {
+            width: 50px; height: 50px;
+            border-radius: 50%;
+            border: 2px solid white;
+            margin-bottom: 10px;
+        }
+
+        .shayari-text { font-size: 1.2rem; line-height: 1.6; font-style: italic; color: #eee; }
+
+        /* Different Colors for Boxes */
+        .color-1 { border-color: #ff4757; }
+        .color-2 { border-color: #3742fa; }
+        .color-3 { border-color: #2ed573; }
+        .color-4 { border-color: #ffa502; }
+        .color-5 { border-color: #e83e8c; }
+
+        .btn-wa {
+            display: inline-block;
+            background: #25d366;
+            color: white;
+            padding: 12px 25px;
+            border-radius: 50px;
+            text-decoration: none;
+            margin-top: 20px;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="founder-card">
+        <img src="shivam.jpg" alt="Shivam Singh" class="founder-photo">
+        <h1 class="founder-name">Shivam Singh</h1>
+        <a href="https://instagram.com/Shivam_singh_2586" class="insta-id">@Shivam_singh_2586</a>
+        <br>
+        <a href="https://wa.me/9122635530" class="btn-wa"><i class="fab fa-whatsapp"></i> Chat on WhatsApp</a>
+    </div>
+
+    <div class="shayari-grid">
+        
+        <div class="shayari-box color-1">
+            <img src="shivam.jpg" alt="Shivam">
+            <p class="shayari-text">"Mohabbat ka nateeja humne duniya mein yahi dekha, <br> Jise dil mein basaya tha use naseeb mein nahi dekha." 💔🥺</p>
         </div>
+
+        <div class="shayari-box color-2">
+            <img src="shivam.jpg" alt="Shivam">
+            <p class="shayari-text">"Dard ki mehfil mein hum bhi gaye the, <br> Par wahan humse bade dard-e-dil wale mile." 🥀🌑</p>
+        </div>
+
+        <div class="shayari-box color-3">
+            <img src="shivam.jpg" alt="Shivam">
+            <p class="shayari-text">"Zakhm jab mere seene ke bhar jayenge, <br> Aansu bhi moti bankar bikhar jayenge." 🌪️😢</p>
+        </div>
+
+        <div class="shayari-box color-4">
+            <img src="shivam.jpg" alt="Shivam">
+            <p class="shayari-text">"Humne toh dil diya tha magar unhone thukra diya, <br> Is digital duniya ne humein jeena sikha diya." 📱🖤</p>
+        </div>
+
+        <div class="shayari-box color-5">
+            <img src="shivam.jpg" alt="Shivam">
+            <p class="shayari-text">"Log puchte hain humse hamari muskurahat ka raaz, <br> Unhe kya pata ye humare dukhon ka libas hai." 🎭🥀</p>
+        </div>
+
     </div>
 
-    <div class="shayari-box">
-        <p>"Kamyabi ke safar mein hosle zaroori hain, <br> 
-        Digital duniya mein ab hamari dosti poori hai!" 🚀</p>
-    </div>
-</div>
+    <footer style="text-align: center; padding: 20px; opacity: 0.5;">
+        &copy; 2026 BYSOCIALIG | Founder Shivam Singh
+    </footer>
 
-<style>
-    /* Professional Header Styling */
-    .founder-header {
-        background: linear-gradient(135deg, #121212, #1a1a1a);
-        color: white;
-        padding: 40px 20px;
-        text-align: center;
-        border-bottom: 3px solid #ffc107;
-        border-radius: 0 0 30px 30px;
-    }
+</body>
+</html>
 
-    .profile-container {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        gap: 20px;
-    }
-
-    .profile-pic img {
-        width: 120px;
-        height: 120px;
-        border-radius: 50%;
-        border: 4px solid #ffc107;
-        box-shadow: 0 0 20px rgba(255, 193, 7, 0.3);
-        object-fit: cover;
-    }
-
-    .profile-info h1 {
-        font-size: 2.2rem;
-        margin-bottom: 5px;
-        letter-spacing: 1px;
-    }
-
-    .tagline {
-        font-size: 1.1rem;
-        color: #ccc;
-        margin-bottom: 20px;
-    }
-
-    .tagline span {
-        color: #ffc107;
-        font-weight: bold;
-    }
-
-    .social-pills {
-        display: flex;
-        gap: 15px;
-        justify-content: center;
-        flex-wrap: wrap;
-    }
-
-    .pill {
-        padding: 8px 20px;
-        border-radius: 50px;
-        text-decoration: none;
-        color: white;
-        font-weight: bold;
-        font-size: 0.9rem;
-        transition: 0.3s;
-    }
-
-    .insta { background: linear-gradient(45deg, #f09433, #e6683c, #dc2743, #cc2366, #bc1888); }
-    .wa { background: #25d366; }
-    .pill:hover { transform: scale(1.05); box-shadow: 0 5px 15px rgba(0,0,0,0.3); }
-
-    .shayari-box {
-        margin-top: 30px;
-        font-style: italic;
-        background: rgba(255, 255, 255, 0.05);
-        padding: 15px;
-        border-radius: 10px;
-        border-left: 4px solid #ffc107;
-        max-width: 500px;
-        margin-left: auto;
-        margin-right: auto;
-    }
-
-    .shayari-box p {
-        color: #ddd;
-        font-size: 1.1rem;
-        line-height: 1.5;
-    }
-
-    /* Mobile Responsive */
-    @media (max-width: 600px) {
-        .profile-info h1 { font-size: 1.8rem; }
-    }
-</style>
